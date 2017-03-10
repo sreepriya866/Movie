@@ -1,0 +1,65 @@
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<section class= "page" id ="home">
+			<div class="row header">
+				<div class="col-sm-7">	
+					 <h1  id="homeTitle">IMDB Web App</h1>
+					 <h4 >Search the IMDB Database for your favorite movies</h4>
+				</div>
+				<div class="col-sm-5">
+						<form id="form">
+							<input placeholder='Find a movie' type="text" id="input">
+							<button type="submit">Search</button>
+						</form>			
+				</div>
+			</div>
+			<div class="row" id="tag">
+				<div class="col-sm-12">
+					<h5><a id="watchLink" href="#watch">Go to Watch List</a></h5>
+					<h5><a id="searchLink" href="#search">Go to Search Results</a></h5>
+				</div>
+			</div>
+		</section>
+		<section class="page" id="search">
+			<div class="row">
+				<div class="col-sm-12">	
+						<h3>Search Results</h3>
+						<div class="results"></div>
+				</div>
+				<div class="col-sm-12">
+						<!-- <h3>Watch List</h3> -->
+						<div class="watchlist"></div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="row">
+				<footer class="col-sm-12">
+				</footer>
+			</div>
+		</section>
+	</div>
+
+<script type="text/template" class="movie-info">
+	<div class="movie-row">
+		<div class="title temp"><%= Title %></div>
+		<div class="year temp">(<%= Year %>)</div>
+		<div class="type temp"><%= Type %></div>
+		<div class='id temp'>IMDB ID: <%= imdbID %></div>
+		
+	</div>
+
+</script>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
